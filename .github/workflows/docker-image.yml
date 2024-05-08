@@ -1,0 +1,10 @@
+name: Deploy with Remote Docker
+
+on:
+  release:
+    types: published
+
+jobs:
+  deploy:
+    uses: RedNoodlesOrg/rednet-actions-workflows/.github/workflows/docker-build-push.yml@version-1
+    secrets: inherit

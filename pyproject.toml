@@ -1,7 +1,7 @@
 [project]
-name = "py-project-toml"
+name = "pz-server-manager"
 version = "0.1.0"
-description = "Sample Python Project for creating a new Python Module"
+description = "Project Zomboid Server Manager on the Web"
 authors = [{ name = "Fakeapate", email = "imboden.samuel@protonmail.ch" }]
 license = { text = "MIT" }
 readme = "README.md"
@@ -11,7 +11,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = []
+dependencies = [
+    "flask>=3.0.3",
+    "requests>=2.31.0",
+    "waitress>=3.0.0",
+    "docker>=7.0.0",
+    "sqlalchemy>=2.0.30",
+]
 
 [tool.project-customizations.docs]
 theme = "sphinx_rtd_theme"

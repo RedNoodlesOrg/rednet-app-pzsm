@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+{% block title %}Mods{% endblock %}
+{% block stylesheets %}
+{% endblock stylesheets %}
+{% block content %}
+    <div class="main-container">
+        <div class="modal fade" id="restartModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Restarting Server</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Please confirm restart!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="restart()" data-bs-dismiss="modal" >Restart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="inner-content">
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Mods</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="/"><i class="fa-solid fa-house"></i></a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="javascript:">Mods</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="row pb-5">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <h5 class="card-header">Infos</h5>
+                                        <div class="card-body">
+                                            <p id="modcount" class="card-text">Mods in Collection: {{ count_mods }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="card text-center">
+                                        <h5 class="card-header">Controls</h5>
+                                        <div class="card-body">
+                                            <div class="btn-group-md btn-group-vertical">
+                                                <button type="button" onclick="apply_mods()" class="btn btn-primary">Apply Collection</button>
+                                                <button type="button" data-bs-toggle="modal" data-bs-target="#restartModal" class="btn btn-danger">Restart Server</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modlist" class="row">{% include 'includes/modlist.j2' %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block javascripts %}
+{% endblock javascripts %}

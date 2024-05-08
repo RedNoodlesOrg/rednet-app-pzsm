@@ -1,0 +1,23 @@
+# Ignore Git history
+.git/
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+
+# Ignore development dependencies and virtual environments
+venv/
+.poetry/
+.vscode/
+*.code-workspace
+
+# Ignore other files that might not be necessary in a production build
+Dockerfile
+*.md
+.flake8
+env.env
+.gitignore
+.dockerignore
+tests/
