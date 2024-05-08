@@ -1,0 +1,5 @@
+@import url("sb-admin-2.css");
+
+.toast-container{
+    z-index: 11;
+}
