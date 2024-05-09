@@ -7,7 +7,6 @@ from dataclasses import dataclass
 
 from requests import post
 
-from pzsm.db.mod import sync
 from SteamAPI.mod import Mod
 from SteamAPI.utilities import (
     get_collection_details,
@@ -40,4 +39,3 @@ class Collection:
             for item in get_collection_details([collection_id])["collectiondetails"][0]["children"]
         ]
         self.mods = get_mods_from_details(get_published_file_details(file_ids))
-        sync(self.mods)
