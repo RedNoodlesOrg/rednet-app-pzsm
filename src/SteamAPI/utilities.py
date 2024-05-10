@@ -6,6 +6,11 @@ from flask import json
 from requests import post
 
 from SteamAPI.mod import Mod
+from SteamAPI.model.collectiondetails import (CollectionDetails,
+                                              CollectionDetailsResponse)
+from SteamAPI.model.publishedfiledetails import (PublishedFileDetails,
+                                                 PublishedFileDetailsResponse)
+from SteamAPI.model.workshopfiletype import WorkshopFileType
 
 BASEURL = "https://api.steampowered.com/ISteamRemoteStorage"
 GETCOLLECTIONDETAILS = BASEURL + "/GetCollectionDetails/v1/"
@@ -23,27 +28,41 @@ def _call_api(url: str, payload) -> dict:
     return json.loads(response.text)["response"]
 
 
-def get_collection_details(ids: list[str]) -> dict:
+def get_collection_details(ids: list[str]) -> CollectionDetails:
     """get_collection_details."""
-    return _call_api(GETCOLLECTIONDETAILS, {"collectioncount": len(ids), **list_to_kv(ids)})
+
+    response = CollectionDetailsResponse.model_validate(
+        _call_api(GETCOLLECTIONDETAILS, {"collectioncount": len(ids), **list_to_kv(ids)})
+    )
+
+    if response.result != 1 or response.resultcount != 1:
+        raise ValueError("API Response is not as expected")
+    return response.collectiondetails[0]
 
 
-def get_published_file_details(ids: list[str]) -> dict:
+def get_mod_ids(details: CollectionDetails) -> list[str]:
+    ids = []
+    for file in details.children:
+        if file.filetype is WorkshopFileType.COLLECTION:
+            collection_details = get_collection_details([file.publishedfileid])
+            ids.extend(get_mod_ids(collection_details))
+        elif file.filetype is WorkshopFileType.COMMUNITY:
+            ids.append(file.publishedfileid)
+    return ids
+
+
+def get_published_file_details(details: CollectionDetails) -> list[PublishedFileDetails]:
     """get_published_file_details."""
-    return _call_api(GETPUBLISHEDFILEDETAILS, {"itemcount": len(ids), **list_to_kv(ids)})
+    ids = get_mod_ids(details)
+    response = PublishedFileDetailsResponse.model_validate(
+        _call_api(GETPUBLISHEDFILEDETAILS, {"itemcount": len(ids), **list_to_kv(ids)})
+    )
+    return response.publishedfiledetails
 
 
-def get_mods_from_details(details: dict):
+def get_mods_from_details(files: list[PublishedFileDetails]):
     """get_mods_from_details."""
     mods = []
-    for file in details["publishedfiledetails"]:
-        creator_app_id = file.get("creator_app_id")
-        if creator_app_id and creator_app_id == 766:
-            file_ids = [
-                item["publishedfileid"]
-                for item in get_collection_details([file["publishedfileid"]])["collectiondetails"][0]["children"]
-            ]
-            mods.extend(get_mods_from_details(get_published_file_details(file_ids)))
-        else:
-            mods.append(Mod(file))
+    for file in files:
+        mods.append(Mod(file.model_dump()))
     return mods
