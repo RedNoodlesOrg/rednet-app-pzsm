@@ -4,7 +4,7 @@ from typing import Any, get_type_hints
 
 from pydantic import BaseModel, model_validator
 
-from SteamAPI.model.result import Result
+from .enums import Result
 
 
 class PublishedFileDetailsTag(BaseModel):
@@ -61,9 +61,3 @@ class PublishedFileDetails(BaseModel):
                 for field in required_fields:
                     assert field in data and data[field] is not None, f"{field} is required when result is {Result.OK}"
         return data
-
-
-class PublishedFileDetailsResponse(BaseModel):
-    result: int
-    resultcount: int
-    publishedfiledetails: list[PublishedFileDetails]
