@@ -1,21 +1,18 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Flask",
+            "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "module": "flask",
+            "program": "${file}",
+            "console": "integratedTerminal",
             "env": {
-                "FLASK_APP": "pzsm_app",
-                "FLASK_DEBUG": "1"
+                "PYTEST_ADDOPTS": "--no-cov"
             },
-            "args": [
-                "run",
-                "--no-debugger",
-                "--no-reload"
-            ],
-            "jinja": true,
-            "justMyCode": true
+            "purpose": [
+                "debug-test"
+            ]
         }
     ]
 }

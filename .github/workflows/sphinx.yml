@@ -41,6 +41,7 @@ jobs:
             --ext-todo \
             --ext-autodoc \
             --ext-intersphinx \
+            --extensions "sphinx.ext.napoleon" \
             -H $PROJECT_NAME \
             -A $PROJECT_AUTHOR \
             -V $PROJECT_VERSION \
