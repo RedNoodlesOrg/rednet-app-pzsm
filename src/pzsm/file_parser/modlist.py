@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 from SteamAPI.mod import Mod
-from SteamAPI.utilities import get_mods_from_details, get_published_file_details
+from SteamAPI.utilities import (get_mods_from_details,
+                                get_published_file_details)
 
 
 class Modlist:
