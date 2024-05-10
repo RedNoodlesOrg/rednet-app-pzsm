@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, List, Optional, get_type_hints
+from typing import Any, get_type_hints
 
 from pydantic import BaseModel, model_validator
 
@@ -20,8 +20,7 @@ def get_optional_fields(cls) -> set:
     optional_fields = set()
     type_hints = get_type_hints(cls, include_extras=True)
     for field_name, field_type in type_hints.items():
-        name_attr = getattr(field_type, "_name", None)
-        if name_attr == "Optional":
+        if type(None) in getattr(field_type, "__args__", ()):
             optional_fields.add(field_name)
     return optional_fields
 
