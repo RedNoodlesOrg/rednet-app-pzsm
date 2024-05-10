@@ -5,6 +5,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from SteamAPI.model import PublishedFileDetails
+
 
 @dataclass
 class ModId:
@@ -43,10 +45,12 @@ class Mod:
     thumbnail: str
     name: str
 
-    def __init__(self, workshop_details: dict):
+    def __init__(self, workshop_details: PublishedFileDetails):
         """__init__."""
-        self.description = workshop_details.get("description", "NOT FOUND")
-        self.mod_ids = extract_id(workshop_details.get("description", ""))
-        self.workshop_id = workshop_details.get("publishedfileid", "NOT FOUND")
-        self.thumbnail = workshop_details.get("preview_url", "NOT FOUND")
-        self.name = workshop_details.get("title", "NOT FOUND")
+
+        self.description = workshop_details.description if workshop_details.description is not None else "NOT FOUND"
+        self.mod_ids = extract_id(self.description)
+        self.workshop_id = workshop_details.publishedfileid
+        self.thumbnail = workshop_details.preview_url if workshop_details.preview_url is not None else "NOT FOUND"
+        self.name = workshop_details.title if workshop_details.title is not None else "NOT FOUND"
+        self.status = workshop_details.result
