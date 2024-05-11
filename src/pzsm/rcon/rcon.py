@@ -136,7 +136,7 @@ class RconConnection:
             raise TypeError("Expected RconPacket type for request")
         if not self.single_packet_mode and multi:
             if not request:
-                raise ValueError("Must specify a request packet in order to" " read a multi-packet response")
+                raise ValueError("Must specify a request packet in order to read a multi-packet response")
             response = self._read_multi_response(request)
         else:
             response = self._recv_pkt()
