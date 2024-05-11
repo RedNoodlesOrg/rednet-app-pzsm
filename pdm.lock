@@ -5,7 +5,7 @@
 groups = ["default", "dev", "docs"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:9e43470ede84d12f581a83d71e4c5ef03ed39c3ba47b03d9f88d72ae72b1cc94"
+content_hash = "sha256:4ebaa48588867d168bcd7aa8afb185f5d5328515bc6c6fdf34350294fa5effd6"
 
 [[package]]
 name = "alabaster"
@@ -1641,6 +1641,21 @@ groups = ["dev"]
 files = [
     {file = "tomlkit-0.12.4-py3-none-any.whl", hash = "sha256:5cd82d48a3dd89dee1f9d64420aa20ae65cfbd00668d6f094d7578a78efbb77b"},
     {file = "tomlkit-0.12.4.tar.gz", hash = "sha256:7ca1cfc12232806517a8515047ba66a19369e71edf2439d0f5824f91032b6cc3"},
+]
+
+[[package]]
+name = "types-docker"
+version = "7.0.0.20240511"
+requires_python = ">=3.8"
+summary = "Typing stubs for docker"
+groups = ["dev"]
+dependencies = [
+    "types-requests",
+    "urllib3>=2",
+]
+files = [
+    {file = "types-docker-7.0.0.20240511.tar.gz", hash = "sha256:78aaf1f69bbd43a34f96e763f97b6d017118abb480d60d27801b255090c5252f"},
+    {file = "types_docker-7.0.0.20240511-py3-none-any.whl", hash = "sha256:a52f2e54447e47258e04f3ed331b36a05f857027ba9195b2bdcb5d0927767edd"},
 ]
 
 [[package]]

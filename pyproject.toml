@@ -57,6 +57,7 @@ dev = [
     "virtualenv>=20.26.1",
     "types-requests>=2.31.0.20240406",
     "requests-mock>=1.12.1",
+    "types-docker>=7.0.0.20240511",
 ]
 docs = [
     "sphinx>=7.3.7",
