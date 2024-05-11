@@ -24,7 +24,7 @@ modids = [
 
 
 @pytest.mark.unit
-def test_prep(input_collection_details_response, input_published_file_details_response):
+def test_collection(input_collection_details_response, input_published_file_details_response):
     with requests_mock.Mocker(real_http=False) as m:
         m.post(GETCOLLECTIONDETAILS, json=input_collection_details_response)
         m.post(GETPUBLISHEDFILEDETAILS, json=input_published_file_details_response)
