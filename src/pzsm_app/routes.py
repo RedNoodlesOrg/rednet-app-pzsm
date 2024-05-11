@@ -11,7 +11,7 @@ import os
 from flask import Blueprint, jsonify, render_template
 from jinja2 import TemplateNotFound
 
-from pzsm.db.mod import update_enabled
+from pzsm.db.mod import sync, update_enabled
 from pzsm.docker import restart
 from pzsm.file_parser.modlist import Modlist
 from pzsm.file_parser.server_settings import ServerSettings
@@ -44,7 +44,9 @@ def cmd_restart():
 def cmd_apply_mods():
     """apply_mods."""
     server_settings = ServerSettings(os.path.join(CurrentConfig.PZ_SERVER_FOLDER, "Server/servertest.ini"))
-    modlist = Modlist(Collection(CurrentConfig.COLLECTION_ID).mods)
+    collection = Collection(CurrentConfig.COLLECTION_ID)
+    sync(collection.mods)
+    modlist = Modlist(collection.mods)
     server_settings.update_mods(modlist).save()
     return jsonify(success=True)
 

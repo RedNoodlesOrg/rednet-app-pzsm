@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from SteamAPI.mod import Mod
-from SteamAPI.utilities import get_mods_from_details, get_published_file_details
 
 
 class Modlist:
@@ -49,12 +48,3 @@ class Modlist:
             else:
                 raise ValueError("mods not set!")
         return self.modids, self.workshopids
-
-    def get_mods(self):
-        """get_mods."""
-        if self.mods is None and self.workshopids is None:
-            raise ValueError("either mods or workshopids needs to be set!")
-        if self.mods is None and self.workshopids is not None:
-            workshopids = self.workshopids.split(";")
-            self.mods = get_mods_from_details(get_published_file_details(workshopids))
-        return self.mods
