@@ -39,6 +39,7 @@ class Collection:
             collection_id (str): Collection Id
         """
         collection_details = self._get_collection_details([collection_id])
+        self.collection_id = collection_details.publishedfileid
         pub_file_details = self._get_published_file_details(collection_details)
         self.mods = self._get_mods_from_details(pub_file_details)
 

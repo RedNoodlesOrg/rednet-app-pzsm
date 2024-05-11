@@ -1,8 +1,6 @@
 # flake8: noqa: F401
 from __future__ import annotations
 
-from typing import List
-
 from pydantic import BaseModel
 
 from .enums import Result, WorkshopFileType
@@ -16,18 +14,18 @@ class PublishedFile(BaseModel):
 
 
 class CollectionDetails(BaseModel):
-    result: int
+    result: Result
     publishedfileid: str
     children: list[PublishedFile]
 
 
 class PublishedFileDetailsResponse(BaseModel):
-    result: int
+    result: Result
     resultcount: int
     publishedfiledetails: list[PublishedFileDetails]
 
 
 class CollectionDetailsResponse(BaseModel):
-    result: int
+    result: Result
     resultcount: int
     collectiondetails: list[CollectionDetails]
