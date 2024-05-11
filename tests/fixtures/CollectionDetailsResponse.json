@@ -1,0 +1,59 @@
+{
+    "response": {
+        "result": 1,
+        "resultcount": 1,
+        "collectiondetails": [
+            {
+                "publishedfileid": "1234567890",
+                "result": 1,
+                "children": [
+                    {
+                        "publishedfileid": "3221281366",
+                        "sortorder": 0,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221271772",
+                        "sortorder": 1,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221273471",
+                        "sortorder": 2,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221276539",
+                        "sortorder": 3,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221278304",
+                        "sortorder": 4,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221279856",
+                        "sortorder": 5,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221282895",
+                        "sortorder": 6,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221284259",
+                        "sortorder": 7,
+                        "filetype": 0
+                    },
+                    {
+                        "publishedfileid": "3221270060",
+                        "sortorder": 8,
+                        "filetype": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

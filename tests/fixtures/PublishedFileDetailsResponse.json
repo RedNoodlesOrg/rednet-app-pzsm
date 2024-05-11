@@ -1,0 +1,298 @@
+{
+    "response": {
+        "result": 1,
+        "resultcount": 9,
+        "publishedfiledetails": [
+            {
+                "publishedfileid": "3221281366",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "5156063",
+                "file_url": "",
+                "hcontent_file": "5321123298239411938",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283239111/E9A8B00AD588B3F6BE37221D9A03969FD24FC78D/",
+                "hcontent_preview": "2509142838283239111",
+                "title": "SHELTER 49 12",
+                "description": "\r\nMod ID: shelter-4912\r\nMod ID: shelter-4912clean\r\nMap Folder: Shelter 49 12\r\nMap Folder: Shelter 49 12",
+                "time_created": 1713021146,
+                "time_updated": 1713021146,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 8875,
+                "favorited": 210,
+                "lifetime_subscriptions": 10183,
+                "lifetime_favorited": 217,
+                "views": 8795,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221271772",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "2482776",
+                "file_url": "",
+                "hcontent_file": "777053379958428631",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283194140/58146AF44AFA21B26321BE1D06AE7B5E9EC6EDB8/",
+                "hcontent_preview": "2509142838283194140",
+                "title": "SHELTER 22 28",
+                "description": "\r\nWorkshop ID: 3221271772\r\nMod ID: shelter-2228\r\nMap Folder: Shelter 22 28",
+                "time_created": 1713020626,
+                "time_updated": 1713020626,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 7506,
+                "favorited": 130,
+                "lifetime_subscriptions": 8653,
+                "lifetime_favorited": 137,
+                "views": 5147,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221273471",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "4785202",
+                "file_url": "",
+                "hcontent_file": "8396939977419095319",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283201916/DE3E10F7357947D926BCEE6262E3EB28EC3FB1CF/",
+                "hcontent_preview": "2509142838283201916",
+                "title": "SHELTER 25 33",
+                "description": "\r\nMod ID: shelter-2533\r\nMod ID: shelter-2533clean\r\nMap Folder: Shelter 25 33\r\nMap Folder: Shelter 25 33",
+                "time_created": 1713020716,
+                "time_updated": 1713020716,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 7988,
+                "favorited": 148,
+                "lifetime_subscriptions": 9178,
+                "lifetime_favorited": 153,
+                "views": 5561,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221276539",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "4871329",
+                "file_url": "",
+                "hcontent_file": "989014386944003500",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283216369/EE625EA11B5DEA9BCDB66C48ED4737F9742B440E/",
+                "hcontent_preview": "2509142838283216369",
+                "title": "SHELTER 29 26",
+                "description": "\r\n\r\nWorkshop ID: 3221276539\r\nMod ID: shelter-2926\r\nMod ID: shelter-2926clean\r\nMap Folder: Shelter 29 26\r\nMap Folder: Shelter 29 26",
+                "time_created": 1713020883,
+                "time_updated": 1713020883,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 7569,
+                "favorited": 126,
+                "lifetime_subscriptions": 8746,
+                "lifetime_favorited": 128,
+                "views": 4371,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221278304",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "2429425",
+                "file_url": "",
+                "hcontent_file": "6424038258443258616",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283224875/CB649AC43AE8ACF850C489457A8AD9224161B17D/",
+                "hcontent_preview": "2509142838283224875",
+                "title": "SHELTER 40 30",
+                "description": "r\nMod ID: shelter-4030\r\nMap Folder: Shelter 40 30",
+                "time_created": 1713020978,
+                "time_updated": 1713020978,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 7856,
+                "favorited": 133,
+                "lifetime_subscriptions": 9038,
+                "lifetime_favorited": 139,
+                "views": 4658,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221279856",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "4728047",
+                "file_url": "",
+                "hcontent_file": "5601630507130411889",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283232460/9CB00E6C9BEB03568925F1E0FA280B28C1B53B49/",
+                "hcontent_preview": "2509142838283232460",
+                "title": "SHELTER 45 15",
+                "description": "\r\n\r\nWorkshop ID: 3221279856\r\nMod ID: shelter-4515\r\nMod ID: shelter-4515clean\r\nMap Folder: Shelter 45 15\r\nMap Folder: Shelter 45 15",
+                "time_created": 1713021067,
+                "time_updated": 1713021067,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 7390,
+                "favorited": 114,
+                "lifetime_subscriptions": 8521,
+                "lifetime_favorited": 117,
+                "views": 3650,
+                "tags": []
+            },
+            {
+                "publishedfileid": "3221282895",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "2288994",
+                "file_url": "",
+                "hcontent_file": "5201171733014413515",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283245473/71BB56E9E4E7F929C1A21D99DCB1DD1A6967892D/",
+                "hcontent_preview": "2509142838283245473",
+                "title": "TOWER 13 26",
+                "description": "\r\n\r\nWorkshop ID: 3221282895\r\nMod ID: tower-1326\r\nMap Folder: Tower 13 26",
+                "time_created": 1713021226,
+                "time_updated": 1713021226,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 8308,
+                "favorited": 151,
+                "lifetime_subscriptions": 9560,
+                "lifetime_favorited": 158,
+                "views": 5092,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221284259",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "2605769",
+                "file_url": "",
+                "hcontent_file": "819578273512521151",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283252405/E3B60A231566724838F9F03FF169FFB529CC153E/",
+                "hcontent_preview": "2509142838283252405",
+                "title": "TOWER 47 22",
+                "description": "\r\n\r\nWorkshop ID: 3221284259\r\nMod ID: tower-4722\r\nMap Folder: Tower 47 22",
+                "time_created": 1713021301,
+                "time_updated": 1713021301,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 9413,
+                "favorited": 328,
+                "lifetime_subscriptions": 10802,
+                "lifetime_favorited": 347,
+                "views": 11207,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            },
+            {
+                "publishedfileid": "3221270060",
+                "result": 1,
+                "creator": "76561198410032785",
+                "creator_app_id": 108600,
+                "consumer_app_id": 108600,
+                "filename": "",
+                "file_size": "3255862",
+                "file_url": "",
+                "hcontent_file": "1496947278637539076",
+                "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283186496/8A201077AB5F6CDC1D5C4DE508EFB36FD6269AAE/",
+                "hcontent_preview": "2509142838283186496",
+                "title": "SHELTERS TileSet",
+                "description": "\r\n\r\nWorkshop ID: 3221270060\r\nMod ID: shelters-tileset",
+                "time_created": 1713020522,
+                "time_updated": 1713020522,
+                "visibility": 0,
+                "banned": 0,
+                "ban_reason": "",
+                "subscriptions": 11772,
+                "favorited": 187,
+                "lifetime_subscriptions": 13333,
+                "lifetime_favorited": 199,
+                "views": 6264,
+                "tags": [
+                    {
+                        "tag": "Build 41"
+                    },
+                    {
+                        "tag": "Map"
+                    }
+                ]
+            }
+        ]
+    }
+}
