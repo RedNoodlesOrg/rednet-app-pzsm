@@ -37,7 +37,7 @@ def base_render(file: str, **kwargs):
 @blueprint.route("/cmd/restart", methods=["POST"])
 def cmd_restart():
     """restart."""
-    return jsonify(success=restart())
+    return jsonify(success=restart(CurrentConfig.DOCKER_URL, CurrentConfig.DOCKER_CONTAINER))
 
 
 @blueprint.route("/cmd/applymods", methods=["POST"])
