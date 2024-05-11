@@ -55,6 +55,8 @@ dev = [
     "pytest-runner>=6.0.1",
     "shellcheck-py>=0.10.0.1",
     "virtualenv>=20.26.1",
+    "types-requests>=2.31.0.20240406",
+    "requests-mock>=1.12.1",
 ]
 docs = [
     "sphinx>=7.3.7",
@@ -114,8 +116,8 @@ executionEnvironments = [{ root = "src" }]
 
 [tool.pytest.ini_options]
 addopts = "--cov-report xml:coverage.xml --cov src --cov-fail-under 0 --cov-append -m 'not integration'"
-pythonpath = ["src"]
-testpaths = "tests"
+pythonpath = ["./src"]
+testpaths = ["tests"]
 junit_family = "xunit2"
 markers = [
     "integration: marks as integration test",
@@ -138,7 +140,7 @@ extension-pkg-whitelist = [
     "scipy",
 ]
 ignore = "CVS"
-ignore-patterns = "test.*?py,conftest.py"
+ignore-patterns = "test.*?py"
 init-hook = 'import sys; sys.setrecursionlimit(8 * sys.getrecursionlimit())'
 jobs = 0
 limit-inference-results = 100
