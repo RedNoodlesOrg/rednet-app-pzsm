@@ -58,6 +58,7 @@ dev = [
     "types-requests>=2.31.0.20240406",
     "requests-mock>=1.12.1",
     "types-docker>=7.0.0.20240511",
+    "sqlalchemy[mypy]>=2.0.30",
 ]
 docs = [
     "sphinx>=7.3.7",
@@ -68,6 +69,11 @@ docs = [
 [tool.pdm]
 distribution = false
 
+[tool.mypy]
+plugins = [
+    "pydantic.mypy",
+    "sqlalchemy.ext.mypy.plugin"
+]
 
 [tool.bandit]
 exclude_dirs = ["build", "dist", "tests", "scripts"]

@@ -43,7 +43,7 @@ class SQLMod(Base):
     workshop_id = Column(String, primary_key=True)
     thumbnail = Column(String)
     name = Column(String)
-    mod_ids = relationship("SQLModID", backref="mod")
+    mod_ids: list[SQLModID] = relationship("SQLModID", backref="mod", collection_class=list)
 
     @staticmethod
     def from_steam(mod: Mod):
@@ -59,7 +59,7 @@ class SQLMod(Base):
         sqlmod.name = mod.name
         sqlmod.thumbnail = mod.thumbnail
         sqlmod.workshop_id = mod.workshop_id
-        mod_ids = []
+        mod_ids: list[SQLModID] = []
         for mod_id in mod.mod_ids:
             mod_ids.append(SQLModID.from_steam(mod_id, mod.workshop_id))
         sqlmod.mod_ids = mod_ids
@@ -83,7 +83,7 @@ def sync(mods: list[Mod]):
                     session.query(SQLModID).filter_by(workshop_id=mod.workshop_id, mod_id=mod_id.id).first()
                 )
                 if existing_mod_id:
-                    mod_id.enabled = existing_mod_id.enabled
+                    mod_id.enabled = existing_mod_id.enabled is not None and existing_mod_id.enabled
                 else:
                     existing_mod.mod_ids.append(SQLModID.from_steam(mod_id, mod.workshop_id))
         else:
