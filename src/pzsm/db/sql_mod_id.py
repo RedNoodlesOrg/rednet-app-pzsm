@@ -1,19 +1,20 @@
 from __future__ import annotations
 
-from sqlalchemy import Boolean, Column, ForeignKey, String
+from sqlalchemy import Boolean, ForeignKey, String
+from sqlalchemy.orm import mapped_column
 
 from SteamAPI.mod import ModId
 
-from .sql_utilities import Base
+from .sql_base import SQLBase
 
 
-class SQLModID(Base):
+class SQLModID(SQLBase):
     """ModID."""
 
     __tablename__ = "mod_ids"
-    workshop_id = Column(String, ForeignKey("mods.workshop_id"), primary_key=True)
-    mod_id = Column(String, primary_key=True)
-    enabled = Column(Boolean, default=False)
+    workshop_id = mapped_column(String, ForeignKey("mods.workshop_id"), primary_key=True)
+    mod_id = mapped_column(String, primary_key=True)
+    enabled = mapped_column(Boolean, default=False)
 
     @staticmethod
     def from_steam(mod_id: ModId, workshop_id: str) -> SQLModID:

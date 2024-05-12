@@ -1,22 +1,22 @@
 from __future__ import annotations
 
-from sqlalchemy import Column, String
-from sqlalchemy.orm import relationship
+from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from SteamAPI.mod import Mod
 
+from .sql_base import SQLBase
 from .sql_mod_id import SQLModID
-from .sql_utilities import Base
 
 
-class SQLMod(Base):
+class SQLMod(SQLBase):
     """Mod."""
 
     __tablename__ = "mods"
-    workshop_id = Column(String, primary_key=True)
-    thumbnail = Column(String)
-    name = Column(String)
-    mod_ids: list[SQLModID] = relationship("SQLModID", backref="mod", collection_class=list)
+    workshop_id = mapped_column(String, primary_key=True)
+    thumbnail = mapped_column(String)
+    name = mapped_column(String)
+    mod_ids: Mapped[list[SQLModID]] = relationship("SQLModID", backref="mod")
 
     @staticmethod
     def from_steam(mod: Mod):
