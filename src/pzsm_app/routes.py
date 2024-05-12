@@ -11,12 +11,12 @@ import os
 from flask import Blueprint, jsonify, render_template
 from jinja2 import TemplateNotFound
 
-from pzsm.db.sql_utilities import sync, update_enabled
+from pzsm.db import sync, update_enabled
 from pzsm.docker import restart
 from pzsm.file_parser.modlist import Modlist
 from pzsm.file_parser.server_settings import ServerSettings
 from pzsm_app.config import CurrentConfig
-from SteamAPI.collection import Collection
+from SteamAPI import Collection
 
 blueprint = Blueprint(
     "views",
