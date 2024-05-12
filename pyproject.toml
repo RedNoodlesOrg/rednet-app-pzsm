@@ -70,10 +70,7 @@ docs = [
 distribution = false
 
 [tool.mypy]
-plugins = [
-    "pydantic.mypy",
-    "sqlalchemy.ext.mypy.plugin"
-]
+plugins = ["pydantic.mypy", "sqlalchemy.ext.mypy.plugin"]
 
 [tool.bandit]
 exclude_dirs = ["build", "dist", "tests", "scripts"]
@@ -122,7 +119,7 @@ pythonPlatform = "Linux"
 executionEnvironments = [{ root = "src" }]
 
 [tool.pytest.ini_options]
-addopts = "--cov-report xml:coverage.xml --cov src --cov-fail-under 0 --cov-append -m 'not integration'"
+addopts = ["--import-mode=importlib"]
 pythonpath = ["./src"]
 testpaths = ["tests"]
 junit_family = "xunit2"
