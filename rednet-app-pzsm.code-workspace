@@ -45,9 +45,10 @@
 		"python.autoComplete.extraPaths": [
 			"./src"
 		],
-		"python.testing.unittestEnabled": true,
+		"python.testing.unittestEnabled": false,
 		"python.testing.pytestEnabled": true,
 		"python.testing.pytestArgs": [
+			"--no-cov",
 			"./tests"
 		],
 		"pylint.args": [
@@ -67,20 +68,19 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"name": "Python Debugger: Current File",
+				"name": "Python Debugger",
 				"type": "debugpy",
 				"request": "launch",
-				"program": "${file}",
 				"console": "integratedTerminal",
 				"env": {
 					"PYTEST_ADDOPTS": "--no-cov",
 					"PYTHONPATH": "./src"
 				},
 				"purpose": [
-					"debug-test",
-					"debug-in-terminal"
+					"debug-test"
 				],
-				"stopOnEntry": true
+				"justMyCode": false,
+				"stopOnEntry": false
 			}
 		],
 		"compounds": []

@@ -21,8 +21,7 @@ class Modlist:
             workshopids (str | None, optional): List of workshop id's. Defaults to None.
 
         Raises:
-            ValueError: _description_
-            ValueError: _description_
+            ValueError: Occurs when either both mods and ids are None or both are set.
         """
         if mods is None:
             if modids is None or workshopids is None:

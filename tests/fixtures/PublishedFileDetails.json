@@ -1,0 +1,33 @@
+{
+    "publishedfileid": "3221270060",
+    "result": 1,
+    "creator": "76561198410032785",
+    "creator_app_id": 108600,
+    "consumer_app_id": 108600,
+    "filename": "",
+    "file_size": "3255862",
+    "file_url": "",
+    "hcontent_file": "1496947278637539076",
+    "preview_url": "https://steamuserimages-a.akamaihd.net/ugc/2509142838283186496/8A201077AB5F6CDC1D5C4DE508EFB36FD6269AAE/",
+    "hcontent_preview": "2509142838283186496",
+    "title": "SHELTERS TileSet",
+    "description": "\r\n\r\nWorkshop ID: 3221270060\r\nMod ID: shelters-tileset",
+    "time_created": 1713020522,
+    "time_updated": 1713020522,
+    "visibility": 0,
+    "banned": 0,
+    "ban_reason": "",
+    "subscriptions": 11772,
+    "favorited": 187,
+    "lifetime_subscriptions": 13333,
+    "lifetime_favorited": 199,
+    "views": 6264,
+    "tags": [
+        {
+            "tag": "Build 41"
+        },
+        {
+            "tag": "Map"
+        }
+    ]
+}

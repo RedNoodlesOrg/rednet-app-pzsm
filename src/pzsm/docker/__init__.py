@@ -4,13 +4,11 @@ from __future__ import annotations
 
 import docker
 
-from pzsm_app.config import CurrentConfig
 
-
-def restart():
+def restart(base_url: str, container_name: str):
     """Restart PZ Server."""
-    client = docker.DockerClient(base_url=CurrentConfig.DOCKER_URL)
-    container = client.containers.get(CurrentConfig.DOCKER_CONTAINER)
+    client = docker.DockerClient(base_url=base_url)
+    container = client.containers.get(container_name)
 
     if container is not None:
         container.restart()
