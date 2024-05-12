@@ -20,9 +20,9 @@ def fixture_steamapi():
         dict: A dictionary representing the JSON response from the 'GETCOLLECTIONDETAILS' endpoint.
     """
 
-    with open("tests/fixtures/PublishedFileDetailsResponse.json", encoding="utf-8") as f:
+    with open("tests/data/PublishedFileDetailsResponse.json", encoding="utf-8") as f:
         input_published_file_details_response = json.load(f)
-    with open("tests/fixtures/CollectionDetailsResponse.json", encoding="utf-8") as f:
+    with open("tests/data/CollectionDetailsResponse.json", encoding="utf-8") as f:
         input_collection_details_response = json.load(f)
 
     yield input_published_file_details_response, input_collection_details_response
@@ -37,7 +37,7 @@ def fixture_db():
         dict: A dictionary representing a mod object.
         sqlite3.Connection: A connection object to the SQLite database.
     """
-    with open("tests/fixtures/PublishedFileDetails.json", encoding="utf-8") as f:
+    with open("tests/data/PublishedFileDetails.json", encoding="utf-8") as f:
         input_mod_json = json.load(f)
 
     con = sqlite3.connect("mods.db")
