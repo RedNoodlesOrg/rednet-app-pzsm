@@ -24,7 +24,8 @@ modids = [
 
 
 @pytest.mark.unit
-def test_collection(input_collection_details_response, input_published_file_details_response):
+def test_collection(fixture_steamapi):
+    input_published_file_details_response, input_collection_details_response = fixture_steamapi
     with requests_mock.Mocker(real_http=False) as m:
         m.post(GETCOLLECTIONDETAILS, json=input_collection_details_response)
         m.post(GETPUBLISHEDFILEDETAILS, json=input_published_file_details_response)
