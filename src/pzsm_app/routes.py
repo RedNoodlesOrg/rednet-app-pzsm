@@ -47,7 +47,7 @@ def cmd_apply_mods():
     collection = Collection(CurrentConfig.COLLECTION_ID)
     sync(collection.mods)
     modlist = Modlist(collection.mods)
-    server_settings.update_mods(modlist).save()
+    server_settings.update_mods(modlist)
     return jsonify(success=True)
 
 
