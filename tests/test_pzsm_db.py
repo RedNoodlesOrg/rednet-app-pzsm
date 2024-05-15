@@ -8,7 +8,7 @@ from SteamAPI.model import PublishedFileDetails
 
 
 @pytest.mark.unit
-def test_sync(fixture_db):
+def test_db(fixture_db):
     input_mod_json, con = fixture_db
     mod = Mod(PublishedFileDetails(**input_mod_json))
 
@@ -29,8 +29,3 @@ def test_sync(fixture_db):
     cursor.execute("SELECT * FROM mod_ids")
     result = cursor.fetchall()
     assert result[0][2] == 0
-
-
-@pytest.mark.unit
-def test_update_enabled():
-    pass
