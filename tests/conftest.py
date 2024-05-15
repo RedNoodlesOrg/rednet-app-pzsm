@@ -46,3 +46,17 @@ def fixture_db():
     con.close()
     EngineSingleton.get_instance().dispose()
     os.remove("mods.db")
+
+
+@pytest.fixture
+def fixture_file_parser():
+    """
+    Fixture function that provides the input_mod_json object.
+
+    yield:
+        dict: A dictionary representing a mod object.
+    """
+    with open("tests/data/servertest.ini", encoding="utf-8") as f:
+        mock_file_content = f.readlines()
+
+    yield mock_file_content
