@@ -45,7 +45,7 @@ jobs:
             -H $PROJECT_NAME \
             -A $PROJECT_AUTHOR \
             -V $PROJECT_VERSION \
-            -o docs src/*/
+            -o docs src/
 
       - id: deployment
         uses: sphinx-notes/pages@v3
